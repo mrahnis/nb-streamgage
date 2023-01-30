@@ -1,7 +1,10 @@
+click
 numpy
 scipy
 pandas
 pyarrow
 matplotlib
+bokeh
+pyproj
+statsmodels
 dataretrieval
-ipyleaflet
