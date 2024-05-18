@@ -1,0 +1,46 @@
+[project]
+name = "nb-streamgage"
+authors = [
+  {name = "Michael Rahnis", email = "mike@topomatrix.com"},
+]
+description = "Notebooks working with USGS streamgage data"
+dynamic = ["version"]
+readme = "README.md"
+keywords = ["streamgage", "turbidity", "timeseries"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3"
+]
+
+requires-python = ">=3.9"
+
+dependencies = [
+	"click",
+	"numpy",
+	"scipy",
+	"pandas",
+	"matplotlib",
+	"pyarrow",
+	"bokeh",
+	"pyproj",
+	"statsmodels",
+	"dataretrieval",
+	"jupyterlab",
+	"notebook"
+]
+
+
+[project.urls]
+Homepage = "https://topomatrix.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/mrahnis/nb-streamgage/nb-streamgage.git"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64"]
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+
+[tool.pixi.tasks]
